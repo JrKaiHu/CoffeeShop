@@ -1,0 +1,10 @@
+.carousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: 2px solid white;
+  background-color: transparent;
+}
+.carousel .carousel-indicators .active {
+  background-color: white;
+}/*# sourceMappingURL=carousel.css.map */

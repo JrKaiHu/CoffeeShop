@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>XYZ coffee</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS v5.2.0-beta1 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="css\nav_hover.css" />
+        <link rel="stylesheet" href="css\carousel.css" />
+
+        <style>
+            .card:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 mx-auto">
+            <div class="container">
+                <button
+                    class="navbar-toggler me-2"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand me-auto me-md-5" href="#">
+                    <h2 class="mb-0">XYZ coffee</h2>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-3 dropdown">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <p class="mb-0 mt-3 text-center">Online shop</p>
+                                <p class="text-center">線上商店</p>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="my-3">
+                                    <a class="dropdown-item" href="#"> 線上商店 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 聯名商品 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#">咖啡豆</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 濾泡咖啡 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 咖啡器具 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 原創商品 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#">
+                                <p class="mb-0 mt-3 text-center">About us</p>
+                                <p class="text-center">關於我們</p>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 dropdown">
+                            <a
+                                class="nav-link"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <p class="mb-0 mt-3 text-center">Shop</p>
+                                <p class="text-center">分店一覽</p>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="my-3">
+                                    <a class="dropdown-item" href="#"> 台北大安店 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 桃園中山店 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 新竹中華店 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 台中西屯店 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 彰化曉陽店 </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="dropdown-item" href="#"> 台南永康店 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <p class="mb-0 mt-3 text-center">News</p>
+                                <p class="text-center">最新消息</p>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                                <a
+                                    class="nav-link disabled"
+                                    href="#"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >Disabled</a
+                                >
+                            </li> -->
+                    </ul>
+                    <!-- <form class="d-flex">
+                            <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <button
+                                class="btn btn-outline-success"
+                                type="submit"
+                            >
+                                Search
+                            </button>
+                        </form> -->
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://fakeimg.pl/2048x892/?text=2048x892" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://fakeimg.pl/2048x892/?text=2048x892" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://fakeimg.pl/2048x892/?text=2048x892" class="d-block w-100" alt="..." />
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselIndicators"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselIndicators"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container-fulid my-4">
+            <div class="row d-flex justify-content-center mb-2">
+                <div class="col-9"><h2>咖啡豆推薦</h2></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-9">
+                    <div class="row row-cols-2 row-cols-md-5">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">單品配方</p>
+                                    <p class="text-center fw-bold mb-1">NT$310 - NT$710</p>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">複合配方</p>
+                                    <p class="text-center fw-bold mb-1">NT$310 - NT$710</p>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-none d-md-block">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">春夏配方</p>
+                                    <p class="text-center fw-bold mb-1">NT$310 - NT$710</p>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 d-flex justify-content-center mb-2">
+                <div class="col-9"><h2>最新商品</h2></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-9">
+                    <div class="row row-cols-2 row-cols-md-5">
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">T-shirt</p>
+                                    <div class="text-center mb-1">
+                                        <span class="text-decoration-line-through"> NT$3680 </span>
+                                        <span class="fw-bold">NT$2944</span>
+                                    </div>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">馬克杯</p>
+                                    <div class="text-center mb-1">
+                                        <span class="text-decoration-line-through"> NT$1400 </span>
+                                        <span class="fw-bold">NT$1120</span>
+                                    </div>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">棒球帽</p>
+                                    <div class="text-center mb-1">
+                                        <span class="text-decoration-line-through"> NT$2300 </span>
+                                        <span class="fw-bold">NT$1904</span>
+                                    </div>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-none d-md-block">
+                            <div class="card">
+                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <p class="card-text text-center mb-1">購物袋</p>
+                                    <div class="text-center mb-1">
+                                        <span class="text-decoration-line-through"> NT$1800 </span>
+                                        <span class="fw-bold">NT$1440</span>
+                                    </div>
+                                    <a href="#" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
