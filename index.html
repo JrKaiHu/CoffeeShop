@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 1.0.2 -->
+<!-- version 1.0.3 -->
 <html lang="en">
     <head>
         <title>XYZ coffee</title>
@@ -14,6 +14,11 @@
             integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
             crossorigin="anonymous"
         />
+
+        <!-- vue3 + -->
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src=".\script\vm.js"></script>
+        <!-- vue3 - -->
 
         <link rel="stylesheet" href="css\nav_hover.css" />
         <link rel="stylesheet" href="css\carousel.css" />
@@ -177,15 +182,11 @@
                 ></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="https://fakeimg.pl/2048x892/?text=2048x892" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="https://fakeimg.pl/2048x892/?text=2048x892" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="https://fakeimg.pl/2048x892/?text=2048x892" class="d-block w-100" alt="..." />
-                </div>
+                <template v-for="item in carouselItems">
+                    <div :class="item.classesLst" data-bs-interval="3000">
+                        <img :src="item.src" class="d-block w-100" alt="..." />
+                    </div>
+                </template>
             </div>
             <button
                 class="carousel-control-prev"
@@ -207,44 +208,25 @@
             </button>
         </div>
 
-        <div class="container-fulid my-4">
+        <div class="container-fulid my-4" id="cardGroup">
             <div class="row d-flex justify-content-center mb-2">
                 <div class="col-9"><h2>咖啡豆推薦</h2></div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-9">
                     <div class="row row-cols-2 row-cols-md-5">
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">單品配方</p>
-                                    <p class="text-center fw-bold mb-1">NT$310 - NT$710</p>
-                                    <a href="#" class="stretched-link"></a>
+                        <template v-for="type in coffeeBeanTypes">
+                            <div :class="type.classLst">
+                                <div class="card">
+                                    <img :src="type.imgSrc" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text text-center mb-1">{{ type.typeName }}</p>
+                                        <p class="text-center fw-bold mb-1">{{ type.price }}</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">複合配方</p>
-                                    <p class="text-center fw-bold mb-1">NT$310 - NT$710</p>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-none d-md-block">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">春夏配方</p>
-                                    <p class="text-center fw-bold mb-1">NT$310 - NT$710</p>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3"></div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -255,114 +237,44 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-9">
                     <div class="row row-cols-2 row-cols-md-5">
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">T-shirt</p>
-                                    <div class="text-center mb-1">
-                                        <span class="text-decoration-line-through"> NT$3680 </span>
-                                        <span class="fw-bold">NT$2944</span>
+                        <template v-for="product in latestProducts">
+                            <div :class="product.classLst">
+                                <div class="card">
+                                    <img :src="product.imgSrc" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text text-center mb-1">{{product.name}}</p>
+                                        <div class="text-center mb-1">
+                                            <span class="text-decoration-line-through"> {{product.pricing}} </span>
+                                            <span class="fw-bold"> {{product.actualPrice}} </span>
+                                        </div>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
-                                    <a href="#" class="stretched-link"></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">馬克杯</p>
-                                    <div class="text-center mb-1">
-                                        <span class="text-decoration-line-through"> NT$1400 </span>
-                                        <span class="fw-bold">NT$1120</span>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">棒球帽</p>
-                                    <div class="text-center mb-1">
-                                        <span class="text-decoration-line-through"> NT$2300 </span>
-                                        <span class="fw-bold">NT$1904</span>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-none d-md-block">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="card-text text-center mb-1">購物袋</p>
-                                    <div class="text-center mb-1">
-                                        <span class="text-decoration-line-through"> NT$1800 </span>
-                                        <span class="fw-bold">NT$1440</span>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3"></div>
+                        </template>
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-5 d-flex justify-content-center mb-2">
+            <div class="row mt-5 d-flex justify-content-center">
                 <div class="col-9"><h2>商品分類</h2></div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-9">
                     <div class="row row-cols-2 row-cols-md-5">
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <div class="text-center mb-1">
-                                        <span class="fw-bold">咖啡豆</span>
+                        <template v-for="type in productTypes">
+                            <div :class="type.classLst">
+                                <div class="card">
+                                    <img :src="type.imgSrc" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <div class="text-center mb-1">
+                                            <span class="fw-bold"> {{ type.name }} </span>
+                                        </div>
+                                        <a href="#" class="stretched-link"></a>
                                     </div>
-                                    <a href="#" class="stretched-link"></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <div class="text-center mb-1">
-                                        <span class="fw-bold">濾泡咖啡</span>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <div class="text-center mb-1">
-                                        <span class="fw-bold">咖啡器具</span>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-none d-md-block">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x600/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <div class="text-center mb-1">
-                                        <span class="fw-bold">原創商品</span>
-                                    </div>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3"></div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -372,41 +284,20 @@
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-9">
-                    <div class="row row-cols-2 row-cols-md-4">
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x400/?text=600x400" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="fs-5 fw-bold mb-0">夏季配方冰鎮咖啡開始販售</p>
-                                    <p class="date">2022-05-15</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    <a href="#" class="stretched-link"></a>
+                    <div class="row row-cols-1 row-cols-md-4">
+                        <template v-for="info in infos">
+                            <div :class="info.classLst">
+                                <div class="card">
+                                    <img :src="info.imgSrc" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <p class="fs-5 fw-bold mb-0">{{ info.title }}</p>
+                                        <p class="date">{{ info.date }}</p>
+                                        <p>{{ info.content }}</p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x400/?text=600x400" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="fs-5 fw-bold mb-0">夏季配方冰鎮咖啡開始販售</p>
-                                    <p class="date">2022-06-12</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-none d-md-block">
-                            <div class="card">
-                                <img src="https://fakeimg.pl/600x400/?text=600x600" class="card-img-top" alt="..." />
-                                <div class="card-body">
-                                    <p class="fs-5 fw-bold mb-0">夏季配方冰鎮咖啡開始販售</p>
-                                    <p class="date">2022-07-9</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    <a href="#" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3"></div>
+                        </template>
                     </div>
                 </div>
             </div>
