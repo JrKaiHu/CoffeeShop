@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version 1.0.4 -->
+<!-- version 1.0.5 -->
 <html lang="en">
     <head>
         <title>XYZ coffee</title>
@@ -215,11 +215,11 @@
         </div>
 
         <div class="container-fulid my-4" id="cardGroup">
-            <div class="row d-flex justify-content-center mb-2">
-                <div class="col-9"><h2>咖啡豆推薦</h2></div>
+            <div class="row mb-2">
+                <div class="col-9 mx-auto"><h2>咖啡豆推薦</h2></div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-9">
+            <div class="row">
+                <div class="col-9 mx-auto">
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="type in coffeeBeanTypes">
                             <div :class="type.classLst">
@@ -237,11 +237,11 @@
                 </div>
             </div>
 
-            <div class="row mt-5 d-flex justify-content-center mb-2">
-                <div class="col-9"><h2>最新商品</h2></div>
+            <div class="row mt-5 mb-2">
+                <div class="col-9 mx-auto"><h2>最新商品</h2></div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-9">
+            <div class="row">
+                <div class="col-9 mx-auto">
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="product in latestProducts">
                             <div :class="product.classLst">
@@ -262,11 +262,11 @@
                 </div>
             </div>
 
-            <div class="row mt-5 d-flex justify-content-center">
-                <div class="col-9"><h2>商品分類</h2></div>
+            <div class="row mt-5">
+                <div class="col-9 mx-auto"><h2>商品分類</h2></div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-9">
+            <div class="row">
+                <div class="col-9 mx-auto">
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="type in productTypes">
                             <div :class="type.classLst">
@@ -285,11 +285,11 @@
                 </div>
             </div>
 
-            <div class="row mt-5 d-flex justify-content-center mb-2">
-                <div class="col-9"><h2>News</h2></div>
+            <div class="row mt-5 mb-2">
+                <div class="col-9 mx-auto"><h2>News</h2></div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-9">
+            <div class="row">
+                <div class="col-9 mx-auto">
                     <div class="row row-cols-1 row-cols-md-4">
                         <template v-for="info in infos">
                             <div :class="info.classLst">
