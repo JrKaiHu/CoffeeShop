@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<!-- version 1.0.5 -->
+<!-- version 1.0.6 -->
 <html lang="en">
     <head>
         <title>XYZ coffee</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
         <!-- Bootstrap CSS v5.2.0-beta1 -->
         <link
@@ -13,6 +16,10 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
             integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
             crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
         />
 
         <!-- vue3 + -->
@@ -34,13 +41,19 @@
 
             .carousel-control-prev-icon,
             .carousel-control-next-icon {
-                width: 20vh;
-                height: 20vh;
+                width: 3vh;
+                height: 3vh;
+            }
+
+            button[type="button"][class~="btn"] {
+                width: 10%;
             }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto">
+        <nav
+            class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto"
+        >
             <div class="container">
                 <button
                     class="navbar-toggler me-2"
@@ -56,7 +69,10 @@
                 <a class="navbar-brand me-auto me-md-5" href="#">
                     <h2 class="mb-0">XYZ coffee</h2>
                 </a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item me-3 dropdown">
                             <a
@@ -70,24 +86,37 @@
                                 <p class="mb-0 mt-3 text-center">Online shop</p>
                                 <p class="text-center">線上商店</p>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdown"
+                            >
                                 <li class="my-3">
-                                    <a class="dropdown-item" href="#"> 線上商店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        線上商店
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 聯名商品 </a>
+                                    <a class="dropdown-item" href="#">
+                                        聯名商品
+                                    </a>
                                 </li>
                                 <li class="mb-3">
                                     <a class="dropdown-item" href="#">咖啡豆</a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 濾泡咖啡 </a>
+                                    <a class="dropdown-item" href="#">
+                                        濾泡咖啡
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 咖啡器具 </a>
+                                    <a class="dropdown-item" href="#">
+                                        咖啡器具
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 原創商品 </a>
+                                    <a class="dropdown-item" href="#">
+                                        原創商品
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -109,24 +138,39 @@
                                 <p class="mb-0 mt-3 text-center">Shop</p>
                                 <p class="text-center">分店一覽</p>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul
+                                class="dropdown-menu"
+                                aria-labelledby="navbarDropdown"
+                            >
                                 <li class="my-3">
-                                    <a class="dropdown-item" href="#"> 台北大安店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        台北大安店
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 桃園中山店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        桃園中山店
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 新竹中華店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        新竹中華店
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 台中西屯店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        台中西屯店
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 彰化曉陽店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        彰化曉陽店
+                                    </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 台南永康店 </a>
+                                    <a class="dropdown-item" href="#">
+                                        台南永康店
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -164,7 +208,11 @@
             </div>
         </nav>
 
-        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div
+            id="carouselIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+        >
             <div class="carousel-indicators">
                 <button
                     type="button"
@@ -200,7 +248,10 @@
                 data-bs-target="#carouselIndicators"
                 data-bs-slide="prev"
             >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button
@@ -209,25 +260,36 @@
                 data-bs-target="#carouselIndicators"
                 data-bs-slide="next"
             >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
 
         <div class="container-fulid my-4" id="cardGroup">
-            <div class="row mb-2">
+            <div class="row mb-2 mx-0">
                 <div class="col-9 mx-auto"><h2>咖啡豆推薦</h2></div>
             </div>
-            <div class="row">
+            <div class="row mx-0">
                 <div class="col-9 mx-auto">
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="type in coffeeBeanTypes">
                             <div :class="type.classLst">
                                 <div class="card">
-                                    <img :src="type.imgSrc" class="card-img-top" alt="..." />
+                                    <img
+                                        :src="type.imgSrc"
+                                        class="card-img-top"
+                                        alt="..."
+                                    />
                                     <div class="card-body">
-                                        <p class="card-text text-center mb-1">{{ type.typeName }}</p>
-                                        <p class="text-center fw-bold mb-1">{{ type.price }}</p>
+                                        <p class="card-text text-center mb-1">
+                                            {{ type.typeName }}
+                                        </p>
+                                        <p class="text-center fw-bold mb-1">
+                                            {{ type.price }}
+                                        </p>
                                         <a href="#" class="stretched-link"></a>
                                     </div>
                                 </div>
@@ -237,21 +299,33 @@
                 </div>
             </div>
 
-            <div class="row mt-5 mb-2">
+            <div class="row mt-5 mb-2 mx-0">
                 <div class="col-9 mx-auto"><h2>最新商品</h2></div>
             </div>
-            <div class="row">
+            <div class="row mx-0">
                 <div class="col-9 mx-auto">
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="product in latestProducts">
                             <div :class="product.classLst">
                                 <div class="card">
-                                    <img :src="product.imgSrc" class="card-img-top" alt="..." />
+                                    <img
+                                        :src="product.imgSrc"
+                                        class="card-img-top"
+                                        alt="..."
+                                    />
                                     <div class="card-body">
-                                        <p class="card-text text-center mb-1">{{product.name}}</p>
+                                        <p class="card-text text-center mb-1">
+                                            {{product.name}}
+                                        </p>
                                         <div class="text-center mb-1">
-                                            <span class="text-decoration-line-through"> {{product.pricing}} </span>
-                                            <span class="fw-bold"> {{product.actualPrice}} </span>
+                                            <span
+                                                class="text-decoration-line-through"
+                                            >
+                                                {{product.pricing}}
+                                            </span>
+                                            <span class="fw-bold">
+                                                {{product.actualPrice}}
+                                            </span>
                                         </div>
                                         <a href="#" class="stretched-link"></a>
                                     </div>
@@ -262,19 +336,25 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-5 mx-0">
                 <div class="col-9 mx-auto"><h2>商品分類</h2></div>
             </div>
-            <div class="row">
+            <div class="row mx-0">
                 <div class="col-9 mx-auto">
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="type in productTypes">
                             <div :class="type.classLst">
                                 <div class="card">
-                                    <img :src="type.imgSrc" class="card-img-top" alt="..." />
+                                    <img
+                                        :src="type.imgSrc"
+                                        class="card-img-top"
+                                        alt="..."
+                                    />
                                     <div class="card-body">
                                         <div class="text-center mb-1">
-                                            <span class="fw-bold"> {{ type.name }} </span>
+                                            <span class="fw-bold">
+                                                {{ type.name }}
+                                            </span>
                                         </div>
                                         <a href="#" class="stretched-link"></a>
                                     </div>
@@ -285,18 +365,24 @@
                 </div>
             </div>
 
-            <div class="row mt-5 mb-2">
+            <div class="row mt-5 mb-2 mx-0">
                 <div class="col-9 mx-auto"><h2>News</h2></div>
             </div>
-            <div class="row">
+            <div class="row mx-0">
                 <div class="col-9 mx-auto">
                     <div class="row row-cols-1 row-cols-md-4">
                         <template v-for="info in infos">
                             <div :class="info.classLst">
                                 <div class="card">
-                                    <img :src="info.imgSrc" class="card-img-top" alt="..." />
+                                    <img
+                                        :src="info.imgSrc"
+                                        class="card-img-top"
+                                        alt="..."
+                                    />
                                     <div class="card-body">
-                                        <p class="fs-5 fw-bold mb-0">{{ info.title }}</p>
+                                        <p class="fs-5 fw-bold mb-0">
+                                            {{ info.title }}
+                                        </p>
                                         <p class="date">{{ info.date }}</p>
                                         <p>{{ info.content }}</p>
                                         <a href="#" class="stretched-link"></a>
@@ -304,6 +390,81 @@
                                 </div>
                             </div>
                         </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fulid bg-dark bg-gradient mt-5">
+            <div class="row mx-0">
+                <div class="col-6 mx-auto mt-4">
+                    <div class="text-center">
+                        <h2 class="text-primary">XYZ Coffee</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0">
+                <div class="col-5 mx-auto mt-2">
+                    <div class="text-center lh-3 text-primary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate recusandae quae non consequatur architecto
+                        autem repellat, delectus illo iusto natus nostrum quia
+                        minima voluptates odio corrupti.
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0">
+                <div class="col-6 mx-auto mt-3">
+                    <div class="text-center">
+                        <i
+                            class="bi bi-facebook me-2"
+                            style="font-size: 1.7rem; color: rgb(27, 100, 236)"
+                        ></i>
+                        <i
+                            class="bi bi-instagram me-2"
+                            style="font-size: 1.7rem; color: rgb(27, 100, 236)"
+                        ></i>
+                        <i
+                            class="bi bi-twitter me-2"
+                            style="font-size: 1.7rem; color: rgb(27, 100, 236)"
+                        ></i>
+                        <i
+                            class="bi bi-google"
+                            style="font-size: 1.7rem; color: rgb(27, 100, 236)"
+                        ></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0">
+                <div class="col-12 col-lg-8 mx-auto">
+                    <div class="text-center mt-3 mb-4">
+                        <button
+                            type="button"
+                            class="btn btn-outline-primary me-2"
+                        >
+                            Home
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-primary me-2"
+                        >
+                            About
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-primary me-2"
+                        >
+                            Contact
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-primary me-2"
+                        >
+                            Blog
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">
+                            Article
+                        </button>
                     </div>
                 </div>
             </div>
