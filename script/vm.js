@@ -36,19 +36,19 @@ const app2 = Vue.createApp({
                     classLst: ['col'],
                     imgSrc: 'images\\coffee_bean_1.jpg',
                     typeName: '單品配方',
-                    price: 'NT$285 - NT$650',
+                    price: 'NT$285-NT$650',
                 },
                 {
                     classLst: ['col'],
                     imgSrc: 'images\\coffee_bean_2.jpg',
                     typeName: '複合配方',
-                    price: 'NT$310 - NT$710',
+                    price: 'NT$310-NT$710',
                 },
                 {
                     classLst: ['col', 'd-none', 'd-md-block'],
                     imgSrc: 'images\\coffee_bean_3.jpg',
                     typeName: '春夏配方',
-                    price: 'NT$500 - NT$1050',
+                    price: 'NT$500-NT$1050',
                 },
             ],
             latestProducts: [
