@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version 1.0.7 -->
+<!-- version 1.0.8 -->
 <html lang="en">
     <head>
         <title>XYZ coffee</title>
@@ -23,7 +23,6 @@
 
         <link rel="stylesheet" href="css\nav_hover.css" />
         <link rel="stylesheet" href="css\carousel.css" />
-        <link rel="stylesheet" href="css\cards.css" />
 
         <style>
             .card:hover {
@@ -46,128 +45,8 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto">
-            <div class="container">
-                <button
-                    class="navbar-toggler me-2"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand me-auto me-md-5" href="#">
-                    <h2 class="mb-0">XYZ coffee</h2>
-                </a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item me-3 dropdown">
-                            <a
-                                class="nav-link"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <p class="mb-0 mt-3 text-center">Online shop</p>
-                                <p class="text-center">線上商店</p>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="my-3">
-                                    <a class="dropdown-item" href="#"> 線上商店 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 聯名商品 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#">咖啡豆</a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 濾泡咖啡 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 咖啡器具 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 原創商品 </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#">
-                                <p class="mb-0 mt-3 text-center">About us</p>
-                                <p class="text-center">關於我們</p>
-                            </a>
-                        </li>
-                        <li class="nav-item me-3 dropdown">
-                            <a
-                                class="nav-link"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <p class="mb-0 mt-3 text-center">Shop</p>
-                                <p class="text-center">分店一覽</p>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="my-3">
-                                    <a class="dropdown-item" href="#"> 台北大安店 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 桃園中山店 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 新竹中華店 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 台中西屯店 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 彰化曉陽店 </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a class="dropdown-item" href="#"> 台南永康店 </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <p class="mb-0 mt-3 text-center">News</p>
-                                <p class="text-center">最新消息</p>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                                <a
-                                    class="nav-link disabled"
-                                    href="#"
-                                    tabindex="-1"
-                                    aria-disabled="true"
-                                    >Disabled</a
-                                >
-                            </li> -->
-                    </ul>
-                    <!-- <form class="d-flex">
-                            <input
-                                class="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-                            <button
-                                class="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form> -->
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto" id="navId">
+            <my-nav></my-nav>
         </nav>
 
         <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -234,7 +113,7 @@
                                     <div class="card-body">
                                         <p class="card-text text-center mb-1">{{ type.typeName }}</p>
                                         <p class="text-center fw-bold mb-1">{{ type.price }}</p>
-                                        <a href="#" class="stretched-link"></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +138,7 @@
                                             <div class="text-decoration-line-through">{{product.pricing}}</div>
                                             <div class="fw-bold">{{product.actualPrice}}</div>
                                         </div>
-                                        <a href="#" class="stretched-link"></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +161,7 @@
                                         <div class="text-center mb-1">
                                             <span class="fw-bold"> {{ type.name }} </span>
                                         </div>
-                                        <a href="#" class="stretched-link"></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -305,7 +184,7 @@
                                         <p class="fs-5 fw-bold mb-0">{{ info.title }}</p>
                                         <p class="date">{{ info.date }}</p>
                                         <p>{{ info.content }}</p>
-                                        <a href="#" class="stretched-link"></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -315,44 +194,8 @@
             </div>
         </div>
 
-        <footer class="container-fulid bg-dark bg-gradient mt-5">
-            <div class="row mx-0">
-                <div class="col-6 mx-auto mt-4">
-                    <div class="text-center">
-                        <h2 class="text-primary">XYZ Coffee</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row mx-0">
-                <div class="col-5 mx-auto mt-2">
-                    <div class="text-center lh-3 text-primary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate recusandae quae non
-                        consequatur architecto autem repellat, delectus illo iusto natus nostrum quia minima voluptates
-                        odio corrupti.
-                    </div>
-                </div>
-            </div>
-            <div class="row mx-0">
-                <div class="col-6 mx-auto mt-3">
-                    <div class="text-center">
-                        <i class="bi bi-facebook me-2" style="font-size: 1.7rem; color: rgb(27, 100, 236)"></i>
-                        <i class="bi bi-instagram me-2" style="font-size: 1.7rem; color: rgb(27, 100, 236)"></i>
-                        <i class="bi bi-twitter me-2" style="font-size: 1.7rem; color: rgb(27, 100, 236)"></i>
-                        <i class="bi bi-google" style="font-size: 1.7rem; color: rgb(27, 100, 236)"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="row mx-0">
-                <div class="col-12 col-lg-8 mx-auto">
-                    <div class="text-center mt-3 mb-4">
-                        <button type="button" class="btn btn-outline-primary me-2">Home</button>
-                        <button type="button" class="btn btn-outline-primary me-2">About</button>
-                        <button type="button" class="btn btn-outline-primary me-2">Contact</button>
-                        <button type="button" class="btn btn-outline-primary me-2">Blog</button>
-                        <button type="button" class="btn btn-outline-primary">Article</button>
-                    </div>
-                </div>
-            </div>
+        <footer class="container-fulid bg-dark bg-gradient mt-5" id="footerId">
+            <my-footer></my-footer>
         </footer>
 
         <!-- Bootstrap JavaScript Libraries -->
