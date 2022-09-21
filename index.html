@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- version 1.0.8 -->
+<!-- version 1.0.9 -->
 <html lang="en">
     <head>
         <title>XYZ coffee</title>
@@ -21,7 +21,7 @@
         <script src=".\script\vm.js"></script>
         <!-- vue3 - -->
 
-        <link rel="stylesheet" href="css\nav_hover.css" />
+        <link rel="stylesheet" href="css\navbar.css" />
         <link rel="stylesheet" href="css\carousel.css" />
 
         <style>
@@ -39,14 +39,14 @@
                 height: 3vh;
             }
 
-            button[type='button'][class~='btn'] {
+            button[type='button'][class~='btn-footer'] {
                 width: 10%;
             }
         </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto" id="navId">
-            <my-nav></my-nav>
+            <my-nav v-bind:name="UserName" v-bind:logtext="logText" v-bind:shopnames="shopNameArray"></my-nav>
         </nav>
 
         <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -108,11 +108,11 @@
                     <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5">
                         <template v-for="type in coffeeBeanTypes">
                             <div :class="type.classLst">
-                                <div class="card">
+                                <div class="card text-center">
                                     <img :src="type.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <p class="card-text text-center mb-1">{{ type.typeName }}</p>
-                                        <p class="text-center fw-bold mb-1">{{ type.price }}</p>
+                                        <p class="card-text mb-1">{{ type.typeName }}</p>
+                                        <p class="fw-bold mb-1">{{ type.price }}</p>
                                         <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
@@ -130,11 +130,11 @@
                     <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5">
                         <template v-for="product in latestProducts">
                             <div :class="product.classLst">
-                                <div class="card">
+                                <div class="card text-center">
                                     <img :src="product.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <p class="card-text text-center mb-0">{{product.name}}</p>
-                                        <div class="text-center mb-1">
+                                        <p class="card-text mb-0">{{product.name}}</p>
+                                        <div class="mb-1">
                                             <div class="text-decoration-line-through">{{product.pricing}}</div>
                                             <div class="fw-bold">{{product.actualPrice}}</div>
                                         </div>
@@ -155,10 +155,10 @@
                     <div class="row row-cols-2 row-cols-md-5">
                         <template v-for="type in productTypes">
                             <div :class="type.classLst">
-                                <div class="card">
+                                <div class="card text-center">
                                     <img :src="type.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <div class="text-center mb-1">
+                                        <div class="mb-1">
                                             <span class="fw-bold"> {{ type.name }} </span>
                                         </div>
                                         <a href="javascript:void(0);" class="stretched-link"></a>

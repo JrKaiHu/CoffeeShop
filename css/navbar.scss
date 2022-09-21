@@ -1,0 +1,47 @@
+.btn {
+    color: white;
+}
+#User {
+    color: rgb(28, 128, 196);
+}
+
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+    .navbar .nav-item .dropdown-menu {
+        margin-top: 0;
+    }
+}
+
+.modal-header h5 {
+    font-size: xx-large;
+    color: blueviolet;
+}
+
+.modal-content {
+    background-color: lightgray;
+}
+
+.modal-body {
+    form {
+        .account .password {
+            border-radius: 20%;
+            width: 90%;
+        }
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.modal-footer {
+    .signup {
+        a {
+            color: blueviolet;
+        }
+    }
+}

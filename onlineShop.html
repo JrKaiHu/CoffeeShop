@@ -11,33 +11,24 @@
             crossorigin="anonymous"
         />
 
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
         <!-- vue3 + -->
         <script src="https://unpkg.com/vue@3"></script>
         <script src=".\script\vm.js"></script>
         <!-- vue3 - -->
 
-        <link rel="stylesheet" href="css\nav_hover.css" />
+        <link rel="stylesheet" href="css\navbar.css" />
     </head>
     <body>
-        <nav
-            class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto"
-            id="navId"
-        >
-            <my-nav></my-nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto" id="navId">
+            <my-nav v-bind:name="UserName" v-bind:logtext="logText"></my-nav>
         </nav>
 
         <div class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img
-                        src="https://fakeimg.pl/1280x400/"
-                        class="d-block w-100"
-                    />
+                    <img src="https://fakeimg.pl/1280x400/" class="d-block w-100" />
                     <div class="carousel-caption d-none d-md-block">
                         <h1 class="fw-bold">線上商店</h1>
                         <h5>Online Shop</h5>
@@ -59,23 +50,12 @@
                     <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4">
                         <template v-for="type in coffeeBeanTypes">
                             <div :class="type.classLst">
-                                <div class="card">
-                                    <img
-                                        :src="type.imgSrc"
-                                        class="card-img-top"
-                                        alt="..."
-                                    />
+                                <div class="card text-center">
+                                    <img :src="type.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <p class="card-text text-center mb-1">
-                                            {{ type.typeName }}
-                                        </p>
-                                        <p class="text-center fw-bold mb-1">
-                                            {{ type.price }}
-                                        </p>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="stretched-link"
-                                        ></a>
+                                        <p class="card-text mb-1">{{ type.typeName }}</p>
+                                        <p class="fw-bold mb-1">{{ type.price }}</p>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -99,30 +79,15 @@
                     <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4">
                         <template v-for="product in latestProducts">
                             <div :class="product.classLst">
-                                <div class="card">
-                                    <img
-                                        :src="product.imgSrc"
-                                        class="card-img-top"
-                                        alt="..."
-                                    />
+                                <div class="card text-center">
+                                    <img :src="product.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <p class="card-text text-center mb-0">
-                                            {{product.name}}
-                                        </p>
-                                        <div class="text-center mb-1">
-                                            <div
-                                                class="text-decoration-line-through"
-                                            >
-                                                {{product.pricing}}
-                                            </div>
-                                            <div class="fw-bold">
-                                                {{product.actualPrice}}
-                                            </div>
+                                        <p class="card-text mb-0">{{product.name}}</p>
+                                        <div class="mb-1">
+                                            <div class="text-decoration-line-through">{{product.pricing}}</div>
+                                            <div class="fw-bold">{{product.actualPrice}}</div>
                                         </div>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="stretched-link"
-                                        ></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -146,22 +111,13 @@
                     <div class="row row-cols-2 row-cols-md-4">
                         <template v-for="type in productTypes">
                             <div :class="type.classLst">
-                                <div class="card">
-                                    <img
-                                        :src="type.imgSrc"
-                                        class="card-img-top"
-                                        alt="..."
-                                    />
+                                <div class="card text-center">
+                                    <img :src="type.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <div class="text-center mb-1">
-                                            <span class="fw-bold">
-                                                {{ type.name }}
-                                            </span>
+                                        <div class="mb-1">
+                                            <span class="fw-bold"> {{ type.name }} </span>
                                         </div>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="stretched-link"
-                                        ></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>
@@ -186,21 +142,12 @@
                         <template v-for="info in infos">
                             <div :class="info.classLst">
                                 <div class="card">
-                                    <img
-                                        :src="info.imgSrc"
-                                        class="card-img-top"
-                                        alt="..."
-                                    />
+                                    <img :src="info.imgSrc" class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <p class="fs-5 fw-bold mb-0">
-                                            {{ info.title }}
-                                        </p>
+                                        <p class="fs-5 fw-bold mb-0">{{ info.title }}</p>
                                         <p class="date">{{ info.date }}</p>
                                         <p>{{ info.content }}</p>
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="stretched-link"
-                                        ></a>
+                                        <a href="javascript:void(0);" class="stretched-link"></a>
                                     </div>
                                 </div>
                             </div>

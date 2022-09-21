@@ -17,7 +17,7 @@
         <script src=".\script\lodash.min.js"></script>
         <!-- vue3 - -->
 
-        <link rel="stylesheet" href="css\nav_hover.css" />
+        <link rel="stylesheet" href="css\navbar.css" />
 
         <style>
             #shopsInfomation,
@@ -28,8 +28,21 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient w-100 mx-auto" id="navId">
-            <my-nav></my-nav>
+            <my-nav v-bind:name="UserName" v-bind:logtext="logText"></my-nav>
         </nav>
+
+        <!-- <form>
+            <div class="form-group">
+                <input type="text" class="account form-control" placeholder="Username" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="password form-control" placeholder="Password" />
+            </div>
+            <div class="form-group">
+                <input type="checkbox" class="remember" />
+            </div>
+            <button type="button" class="btn btn-info">登入</button>
+        </form> -->
 
         <div class="container" id="shopsInfomation">
             <div class="row">
